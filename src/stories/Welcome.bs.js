@@ -2,28 +2,53 @@
 
 var React = require("react");
 var React$1 = require("@storybook/react");
-var Counter$ReasonStorybookExample = require("../Counter.bs.js");
+var Button$ReasonStorybookExample = require("../Button.bs.js");
 
-function Welcome$Counters(Props) {
-  return React.createElement(Counter$ReasonStorybookExample.make, {
+function Welcome$ButtonWithText(Props) {
+  return React.createElement(Button$ReasonStorybookExample.make, {
               onClick: (function (e) {
                   console.log(e);
                   return /* () */0;
                 }),
-              children: "Hello storybook!"
+              children: null
+            }, "Hello", React.createElement("span", {
+                  style: {
+                    fontWeight: "bold",
+                    marginLeft: "4px"
+                  }
+                }, "storybook!"));
+}
+
+var ButtonWithText = {
+  make: Welcome$ButtonWithText
+};
+
+function Welcome$ButtonWithEmoji(Props) {
+  return React.createElement(Button$ReasonStorybookExample.make, {
+              onClick: (function (e) {
+                  console.log(e);
+                  return /* () */0;
+                }),
+              children: React.createElement("span", {
+                    "aria-label": "so cool",
+                    role: "img"
+                  }, " 😀 😎 👍 💯 ")
             });
 }
 
-var Counters = {
-  make: Welcome$Counters
+var ButtonWithEmoji = {
+  make: Welcome$ButtonWithEmoji
 };
 
 var module_ = module;
 
-React$1.storiesOf("Counters", module_).add("Select", (function (param) {
-        return React.createElement(Welcome$Counters, { });
+React$1.storiesOf("Button", module_).add("with Text", (function (param) {
+          return React.createElement(Welcome$ButtonWithText, { });
+        })).add("with Emoji", (function (param) {
+        return React.createElement(Welcome$ButtonWithEmoji, { });
       }));
 
-exports.Counters = Counters;
+exports.ButtonWithText = ButtonWithText;
+exports.ButtonWithEmoji = ButtonWithEmoji;
 exports.module_ = module_;
 /* module_ Not a pure module */

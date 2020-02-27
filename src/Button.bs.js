@@ -2,7 +2,7 @@
 
 var React = require("react");
 
-function Counter(Props) {
+function Button(Props) {
   var onClick = Props.onClick;
   var children = Props.children;
   return React.createElement("div", {
@@ -19,7 +19,7 @@ function Counter(Props) {
                 }, children));
 }
 
-var make = Counter;
+var make = Button;
 
 exports.make = make;
 /* react Not a pure module */
