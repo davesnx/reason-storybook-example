@@ -1,6 +1,5 @@
 open ReactDOMRe;
 
-[@genType "Button"]
 [@react.component]
 let make = (~onClick, ~children) => {
   <div style={Style.make(~fontSize="32px", ())}>

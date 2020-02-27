@@ -17,13 +17,5 @@
       "in-source": true
     }
   ],
-  "gentypeconfig": {
-    "language": "untyped",
-    "shims": {},
-    "debug": {
-      "all": false,
-      "basic": false
-    }
-  },
   "bs-dependencies": ["reason-react", "bs-storybook"]
 }
