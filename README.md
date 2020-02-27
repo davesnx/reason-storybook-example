@@ -1,4 +1,4 @@
-# Welcome to ReasonReact with Storybook
+# ReasonReact with Storybook
 
 This is an example on how to run Storybook with ReasonML. Thanks to [bs-storybook](https://github.com/MyWellGiving/bs-storybook).
 

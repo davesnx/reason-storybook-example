@@ -15,6 +15,7 @@
     "re:watch": "bsb -make-world -w -ws _ ",
     "re:clean": "bsb -clean-world",
     "start": "start-storybook -p 6006",
+    "prebuild": "yarn re:build",
     "build": "build-storybook"
   },
   "dependencies": {
