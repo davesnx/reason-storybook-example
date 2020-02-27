@@ -17,7 +17,6 @@
       "in-source": true
     }
   ],
-  "bs-dependencies": ["reason-react", "bs-storybook"],
   "gentypeconfig": {
     "language": "untyped",
     "shims": {},
@@ -25,5 +24,6 @@
       "all": false,
       "basic": false
     }
-  }
+  },
+  "bs-dependencies": ["reason-react", "bs-storybook"]
 }

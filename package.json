@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "bs-storybook": "^0.3.0",
-    "gentype": "^3.12.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "reason-react": ">=0.7.0"
@@ -27,10 +26,12 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-knobs": "^5.3.14",
     "@storybook/addon-links": "^5.3.14",
     "@storybook/addons": "^5.3.14",
     "@storybook/react": "^5.3.14",
     "babel-loader": "^8.0.6",
-    "bs-platform": "^7.0.1"
+    "bs-platform": "^7.0.1",
+    "gentype": "^3.12.0"
   }
 }

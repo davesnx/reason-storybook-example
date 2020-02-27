@@ -2,33 +2,30 @@
 
 var React = require("react");
 var React$1 = require("@storybook/react");
-var Button$ReasonStorybookExample = require("../Button.bs.js");
+var Knobs$BsStorybook = require("bs-storybook/src/knobs.js");
+var AddonActions = require("@storybook/addon-actions");
+var Button$ReasonStorybookExample = require("../components/Button.bs.js");
 
-function Welcome$ButtonWithText(Props) {
+function ButtonStory$ButtonWithText(Props) {
+  var greet = Props.greet;
   return React.createElement(Button$ReasonStorybookExample.make, {
-              onClick: (function (e) {
-                  console.log(e);
-                  return /* () */0;
-                }),
+              onClick: AddonActions.action("I Clicked The Button!"),
               children: null
             }, "Hello", React.createElement("span", {
                   style: {
                     fontWeight: "bold",
-                    marginLeft: "4px"
+                    margin: "0 4px"
                   }
-                }, "storybook!"));
+                }, greet), "!");
 }
 
 var ButtonWithText = {
-  make: Welcome$ButtonWithText
+  make: ButtonStory$ButtonWithText
 };
 
-function Welcome$ButtonWithEmoji(Props) {
+function ButtonStory$ButtonWithEmoji(Props) {
   return React.createElement(Button$ReasonStorybookExample.make, {
-              onClick: (function (e) {
-                  console.log(e);
-                  return /* () */0;
-                }),
+              onClick: AddonActions.action("I clicked The Button!"),
               children: React.createElement("span", {
                     "aria-label": "so cool",
                     role: "img"
@@ -37,15 +34,17 @@ function Welcome$ButtonWithEmoji(Props) {
 }
 
 var ButtonWithEmoji = {
-  make: Welcome$ButtonWithEmoji
+  make: ButtonStory$ButtonWithEmoji
 };
 
 var module_ = module;
 
 React$1.storiesOf("Button", module_).add("with Text", (function (param) {
-          return React.createElement(Welcome$ButtonWithText, { });
+          return React.createElement(ButtonStory$ButtonWithText, {
+                      greet: Knobs$BsStorybook.text("greeting", "storybook", /* () */0)
+                    });
         })).add("with Emoji", (function (param) {
-        return React.createElement(Welcome$ButtonWithEmoji, { });
+        return React.createElement(ButtonStory$ButtonWithEmoji, { });
       }));
 
 exports.ButtonWithText = ButtonWithText;
