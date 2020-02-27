@@ -1,0 +1,29 @@
+{
+  "name": "reason-storybook-example",
+  "refmt": 3,
+  "namespace": true,
+  "reason": {
+    "react-jsx": 3
+  },
+  "suffix": ".bs.js",
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "bs-dependencies": ["reason-react", "bs-storybook"],
+  "gentypeconfig": {
+    "language": "untyped",
+    "shims": {},
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  }
+}
